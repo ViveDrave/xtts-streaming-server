@@ -123,7 +123,10 @@ def predict_streaming_generator(parsed_input: dict = Body(...)):
         gpt_cond_latent,
         speaker_embedding,
         stream_chunk_size=stream_chunk_size,
-        enable_text_splitting=True
+        enable_text_splitting=True,
+        temperature=0.75,
+        repetition_penalty=5.0,
+        length_penalty=2.0
     )
 
     for i, chunk in enumerate(chunks):

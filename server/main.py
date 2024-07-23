@@ -126,8 +126,6 @@ def predict_streaming_generator(parsed_input: dict = Body(...)):
         enable_text_splitting=True,
         temperature=0.75,
         repetition_penalty=5.0,
-        num_beams=2.0,
-        length_penalty=3.0
     )
 
     for i, chunk in enumerate(chunks):
